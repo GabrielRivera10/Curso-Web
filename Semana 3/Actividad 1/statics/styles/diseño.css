@@ -1,0 +1,103 @@
+/*
+--------------Fuentes-----------FNT--------------
+*/
+@font-face{
+    font-family: "Metropolis";
+    src: url("../fonts/Metropolis/Metropolis-LightItalic.otf")
+}
+@font-face{
+    font-family: "Newton";
+    src: url("../fonts/newton_howard/Newton\ Howard\ Font\ Italic.otf")
+}
+/*
+-----------------tipografía---------------TPG------------
+*/
+.titulo{
+    color: cyan;
+    font-family: "Newton";
+}
+.letra{
+    color: floralwhite;
+    font-family: "Metropolis", "Copperplate", cursiva;
+}
+.letraSecreto{
+    overflow: hidden;
+    color: aliceblue;
+    font-family: "Metropolis", "Copperplate", cursiva;
+}
+.letraMusic{
+    color: azure;
+    font-family: "Metropolis";
+    font-size: 50px;
+}
+/*
+----------------HEADER------------------HDR-----------------
+*/
+#yo{
+    font-family: "Newton";
+    color: greenyellow;
+}
+/*
+------------------BODY------------------BDY----------------
+*/
+body{
+    background-image: url('../images/Nave.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    left:50%;
+}
+#relativo{
+    position: relative;
+}
+/*
+---------------------SECRET------------------SCR------------
+*/
+#secreto1, #secreto2, #secreto3{
+    width: 420px;
+    height: 300px;
+    background-color: aliceblue;
+    border: 5px groove;
+    margin: 20px;
+}
+#secreto1{
+    position: relative;
+    left: 10%;
+}
+#secreto2{
+    position: relative;
+    left: 40%;
+    bottom: 330px;
+}
+#secreto3{
+    position: relative;
+    left: 70%;
+    bottom: 660px;
+}
+#secreto1:hover{
+    background-image: url("../images/Magia.jpg");
+    background-size: contain;
+}
+#secreto2:hover{
+    background-image: url("../images/batman.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#secreto3:hover{
+    background-image: url("../images/boleros.jpg");
+    background-size: contain;
+}
+/*
+-----------------------MUSIC-------------------MSC-----------------
+*/
+#musicFav{
+    height: 400px;
+    width: 500px;
+    border: 7px groove white;
+    margin: 20px;
+    position: absolute;
+    top: 1800px;
+    left: 38%;
+    background-image: url("../images/atardecer.jpeg");
+    background-size: cover;
+    overflow: auto;
+}
