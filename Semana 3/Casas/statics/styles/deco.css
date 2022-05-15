@@ -1,0 +1,40 @@
+@font-face 
+{
+    font-family:Monserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face 
+{
+    font-family:Albas2;
+    src: url(../fonts/ALBA____.TTF);
+}
+#fondo
+{
+    background-image: url(../img/fondo.jpg) ;
+    border: 10px;
+    background-size:cover;
+    background-repeat:no-repeat;
+    margin-top: 40px;
+    margin-right: 120px;
+    margin-left: 120px;
+    margin-bottom: 40px;
+    padding: 15px,15px,15px,15px;
+}
+*
+{
+    cursor: url(../img/cursor.png),auto;
+}
+body
+{
+    text-align: justify;
+    font-family: "Monserrat", fantasy;
+    color: honeydew;
+}
+i
+{
+    font-family:"Albas2","Lucida Handwriting",cursive;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position:static;
+    font-size:xx-large;
+}

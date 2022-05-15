@@ -100,5 +100,4 @@
             // tep ajo vac hal ---para distinguir entre las casas
             //nom para distinguir entre usuario
     }
-
 ?>
