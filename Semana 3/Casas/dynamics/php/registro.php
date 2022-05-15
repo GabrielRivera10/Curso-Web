@@ -23,7 +23,7 @@
     $casa       =(isset($_POST["casa"]) && $_POST["casa"] != "") ?$_POST["casa"] : "no especifico";
 
     $peticion = "INSERT INTO user VALUES ('$usuario', '$nombre', '$casa')";
-    $verdatos = "SELECT * FROM user";
+    $verdatos = "SELECT ID_user FROM user";
 
 
     $query = mysqli_query($conexion, $peticion);
@@ -33,7 +33,11 @@
 
     var_dump($query);
     echo "<br/>";
-    var_dump($datos);
+    while($row = mysqli_fetch_array($query2, MYSQLI_NUM)){
+        
+    }
+    
+    //var_dump($datos);
 
 
 ?>
