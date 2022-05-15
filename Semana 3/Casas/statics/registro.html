@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de registro</title>
+</head>
+<body>
+    </style>
+    <h1 style="text-align:center">
+        <i>
+          Casas :3  
+        </i>
+    </h1>
+    <form action="../dynamics/php/registro.php" method="post" style="text-align:center">
+        <fieldset>
+            <label for="usuario">Usuario: </label>
+            <input type="text" id="usuario" name="usuario">
+            <br>
+            <br>
+            <label for="nombre" >Nombre: </label>
+            <input type="text" id="nombre" name="nombre">
+            <br>
+            <br>
+            <label for="casa">Casa a la que perteneces: </label>
+            <select name="casa" id="casa">
+                <option value="teporingos">
+                    TeporinGODs
+                </option>
+                <option value="ajolotes">
+                    Ajolotesn't
+                </option>
+                <option value="vaquitas">
+                    Vaquitas Marinas
+                </option>
+                <option value="halcones">
+                    Gallos con tenis
+                </option>
+            </select> 
+            <br>
+            <br>
+            <button type="submit"> Enviar </button>
+            <button type="reset"> Eliminar datos </button>
+        </fieldset>
+    </form>
+</body>
+</html>
