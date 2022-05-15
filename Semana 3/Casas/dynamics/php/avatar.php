@@ -1,6 +1,6 @@
 <?php
     
-    $usuario;    =(isset($_POST["usuario"]) && $_POST["usuario"] != "") ?$_POST["usuario"] : "no especifico";   
+    $usuario    =(isset($_POST["usuario"]) && $_POST["usuario"] != "") ?$_POST["usuario"] : "no especifico";   
 
     include("./confi.php");
     $conexion= connect();
