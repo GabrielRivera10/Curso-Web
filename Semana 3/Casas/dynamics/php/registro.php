@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boletos vista</title>
-</head>
-<body>
 <?php
-$usuario    =(isset($_POST["usuario"]) && $_POST["usuario"] != "") ?$_POST["usuario"] : "no especifico";
-$nombre     =(isset($_POST["nombre"]) && $_POST["nombre"] != "") ?$_POST["nombre"] : "no especifico";
-$casa       =(isset($_POST["casa"]) && $_POST["casa"] != "") ?$_POST["casa"] : "no especifico";
-    echo "<table border=1 cellpadding=25px>
+    /*echo "<table border=1 cellpadding=25px>
         <thead>
             <tr>
                 <th colspan='3'><h1>$usuario</h1></th>
@@ -24,7 +12,28 @@ $casa       =(isset($_POST["casa"]) && $_POST["casa"] != "") ?$_POST["casa"] : "
                 <td><br><br>$casa
             </tr>
         </tbody>
-    </table>";
-    ?>
-</body>
-</html>
+    </table>";*/
+
+    include("./confi.php");
+    $conexion= connect();
+    //var_dump($conexion);
+
+    $usuario    =(isset($_POST["usuario"]) && $_POST["usuario"] != "") ?$_POST["usuario"] : "no especifico";
+    $nombre     =(isset($_POST["nombre"]) && $_POST["nombre"] != "") ?$_POST["nombre"] : "no especifico";
+    $casa       =(isset($_POST["casa"]) && $_POST["casa"] != "") ?$_POST["casa"] : "no especifico";
+
+    $peticion = "INSERT INTO user VALUES ('$usuario', '$nombre', '$casa')";
+    $verdatos = "SELECT * FROM user";
+
+
+    $query = mysqli_query($conexion, $peticion);
+    $query2 = mysqli_query($conexion, $verdatos);
+
+    $datos = mysqli_fetch_array($query2, MYSQLI_NUM);
+
+    var_dump($query);
+    echo "<br/>";
+    var_dump($datos);
+
+
+?>
