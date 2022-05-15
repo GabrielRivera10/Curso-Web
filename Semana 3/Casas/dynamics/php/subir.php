@@ -1,10 +1,7 @@
 <?php
-    session_name("sesion");
-    session_id("123456789");
-    session_start();
     
     $usuario    =(isset($_POST["usuario"]) && $_POST["usuario"] != "") ?$_POST["usuario"] : "no especifico";   
-    $user = (isset($_POST["usuario"]) && $_POST["usuario"] != "")? $_POST["usuario"]:false;
+
     include("./confi.php");
     $conexion= connect();
 
@@ -19,7 +16,7 @@
     $verificar = mysqli_fetch_array($query, MYSQLI_NUM);
 
     
-    if($verificar != null){
+    if($verificar != null ){
         echo "
             <title>
                 subir archivos
@@ -32,15 +29,32 @@
                     <br>
                     <input type='file' name='archivo' required>
                     <br>
+                    <input type='hidden' value='$usuario' name='usuario'>
                     <input type='submit' value='Subir'>
                     <input type='reset' value='Borrar datos'>
+                    
                 </label>
             </fieldset>
             </form>
             ";
-            echo "<form action='./subir.php'>
+            echo "<form action='./subir.php' method='POST'>
+                <input type='hidden' value='$usuario' name='usuario'>
                 <button type='submit'>
                     Cargar
+                </button>
+                </form>
+                ";
+            echo "<form action='./avatar.php'>
+                <input type='hidden' value='$usuario' name='usuario'>    
+                <button type='submit'>
+                    Avatar
+                </button>
+                </form>
+                ";
+            echo "<form action='./planos.php'>
+                <input type='hidden' value='$usuario' name='usuario'>
+                <button type='submit'>
+                    Planos
                 </button>
                 </form>
                 ";
@@ -97,8 +111,18 @@
                 }
                 closedir($carpeta);
             }
-            // tep ajo vac hal ---para distinguir entre las casas
-            //nom para distinguir entre usuario
+        }
+    else{
+        echo "
+        <form action='../../templates/registro.html'>
+            <field>
+                <h1>Esa cuenta no existe, favor de crear una nueva.<h1/>
+                </br>
+                <button type='submit'>Registrarse</button>
+            </field>
+            <h2>Si la cuenta ya existe intente de nuevo</h2>
+            <a href='..\..\index.html'>Iniciar sesion</a>
+        </form>
+        ";
     }
-
 ?>

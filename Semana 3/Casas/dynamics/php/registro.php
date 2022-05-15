@@ -34,8 +34,9 @@
     var_dump($query);
     echo "<br/>";
     while($row = mysqli_fetch_array($query2, MYSQLI_NUM)){
-        
+
     }
+    header("location: ../../index.html");
     
     //var_dump($datos);
 
