@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./statics/Css/styles.css" rel="stylesheet">
+    <title>Eventos</title>
+</head>
+<body>
+    <div id="tabla" style="text-align:center">
+        <h1>Tareas De EPN6</h1>
+        <label for="mater">Selecciona la materia</label>
+        <select id="mater">
+            <option value="Matemáticas">Matemáticas</option>
+            <option value="Química">Química</option>
+            <option value="Biología">Biología</option>
+            <option value="Espagnhul">Español</option>
+        </select>
+        <label for="tareaN">Agrega una tarea: </label>
+        <input id="tareaN" name="tareaN" type="text">
+        <br/><br/>
+        <label for="otra">Otra:</label>
+        <input id="otra" name="otra" type="text">
+        <div id="lista">
+        <!--Aqui van las tareas introducidas-->
+        </div>
+        <button id="agregar">Agregar</button>
+    </div>
+    <script src="./dynamics/Js/index.js"></script>
+</body>
+</html>

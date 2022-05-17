@@ -16,7 +16,7 @@
     $verificar = mysqli_fetch_array($query, MYSQLI_NUM);
 
     
-    if($verificar != null ){
+    //if($verificar != null ){
         echo "
             <title>
                 subir archivos
@@ -111,7 +111,7 @@
                 }
                 closedir($carpeta);
             }
-        }
+      /*  }
     else{
         echo "
         <form action='../../templates/registro.html'>
@@ -124,5 +124,5 @@
             <a href='..\..\index.html'>Iniciar sesion</a>
         </form>
         ";
-    }
+    }*/
 ?>

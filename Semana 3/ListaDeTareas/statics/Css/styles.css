@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Bonito";
+    src: url(../fonts/Metropolis/Metropolis-LightItalic.otf);
+}
+#tabla{
+    width: auto;
+    height: auto;
+    border: 8px;
+    border-radius: 10%;
+    border-color: black;
+    background-color: rgb(255, 55, 95);
+    display: inline-block;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+#agregar{
+    height: auto;
+    width: auto;
+    border-radius: 3%;
+    background-color: azure;
+}
+.disMat{
+    width: auto;
+    height: auto;
+    border: 4px;
+    background-color: darkorange;
+    border-radius: 5%;
+    border-color: black;
+    display: inline-block;
+}
+.disTar{
+    width: auto;
+    height: auto;
+    border: 4px;
+    border-radius: 5%;
+    background-color: aquamarine;
+    border-color: black;
+    display: inline-block;
+}
+h1{
+    font-family: "Bonito";
+    color: aliceblue;
+}
+body{
+    background-image: url(../Image/Fondo\ flor.jpg);
+}
