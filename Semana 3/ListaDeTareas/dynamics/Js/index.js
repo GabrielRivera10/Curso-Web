@@ -5,37 +5,51 @@ const input = document.getElementById("tareaN");
 const lista = document.getElementById("lista");
 const borrar = document.getElementsByClassName("borrar");
 const hecha = document.getElementsByClassName("hecha");
-let materia = ['Matemáticas', 'Química', 'Biología', 'Espagnhul'];
+
+var matBas= ['Matemáticas', 'Químca', 'Biología', 'Espagnhul'];
 
 agregar.addEventListener("click", (evento) => {
-    if(otra.value !== ''){
-        console.log(otra.value);
-        let justo = false;
-        while(justo != true){
-            for(let revisar of materia){
-                if(otra === revisar){
-                    justo = false;
-                }else{
-                    justo = true;
-                }
+    if(input.value != ''){
+        let num=0;
+        let existe=0;
+        if(otra.value !==''){ 
+            do{//para esto Aurora, Mia y yo juntamos los cerebros de un ajo y de dos tepos
+                if(otra.value == matBas[num])
+                    existe=1;
+                    num+=1;    
+            }while(num<matBas.length)
+            if(existe==0){
+                mater.innerHTML += '<option value= "' + otra.value + '">' + otra.value + '</option>';
+                lista.innerHTML += '<div class="asignacion">' + otra.value + ': ' + tareaN.value + '<button class="hecha">Hecha</button><button class="borrar">Borrar</button></div>'; 
+                matBas.push(otra.value);
             }
+            else
+            lista.innerHTML += '<div class="asignacion">' + otra.value + ': ' + tareaN.value + '<button class="hecha">Hecha</button><button class="borrar">Borrar</button></div>'; 
+            otra.value='';
         }
-        if(justo == true){
-            mater.innerHTML += '<option value= "' + otra.value + '">' + otra.value + '</option>';//se sigue agregando pero lo arreglare 
-            lista.innerHTML += '<div class="disMat">' + otra.value + '</div><div class="disTar"> ' + tareaN.value + '</div><button class="borrar">Borrar</button><button class="hecha">Hecha</button>'; 
-            materia.push(otra.value);
-            console.log(materia);
+        else{
+            lista.innerHTML += '<div class="asignacion">' + mater.value + ': ' + tareaN.value + '<button class="hecha">Hecha</button><button class="borrar">Borrar</button></div>'; 
         }
     }
     else{
-        lista.innerHTML += '<div><div class="disMat">' + mater.value + '  </div><div class="disTar">' + tareaN.value + '</div><button class="borrar">Borrar</button><button class="hecha">Hecha</button></div><br>'; 
+        alert("Agrega una tarea");
     }
+    tareaN.value='';
 });
 
 lista.addEventListener("click", (evento) => {
     if(evento.target.className === 'borrar'){
-        evento.target.parentElement.outerHTML = '';    
+        evento.target.parentElement.innerHTML = '';    
     }
-    evento.stopPropagation();
-    
+    if(evento.target.className === 'hecha'){
+        if(evento.target.className == 'Hecha'){
+            hecha.value='No hecha';
+            Tareas+=1;
+        }
+        else{
+            hecha.value='Hecha';
+            Tareas-=1;
+        }
+        
+    }    
 });

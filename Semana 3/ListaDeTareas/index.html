@@ -10,22 +10,28 @@
 <body>
     <div id="tabla" style="text-align:center">
         <h1>Tareas De EPN6</h1>
+        <div class="seleccion">
         <label for="mater">Selecciona la materia</label>
         <select id="mater">
             <option value="Matemáticas">Matemáticas</option>
             <option value="Química">Química</option>
             <option value="Biología">Biología</option>
-            <option value="Espagnhul">Español</option>
+            <option value="Espagnhul">Español</option>   
         </select>
-        <label for="tareaN">Agrega una tarea: </label>
-        <input id="tareaN" name="tareaN" type="text">
+        </div>
+        <br/>
+        <label class="petText" for="otra">Otra: </label>
+        <input class="Peticion" id="otra" name="otra" placeholder="Agrega una materia si no esta" style="display: line;">
+        <br/>
+        <label class="petText" for="tareaN">Agrega una tarea: </label>
+        <input class="Peticion" id="tareaN" name="tareaN" type="text" style="display: line;">
         <br/><br/>
-        <label for="otra">Otra:</label>
-        <input id="otra" name="otra" type="text">
+        <button id="agregar">Agregar</button>
         <div id="lista">
         <!--Aqui van las tareas introducidas-->
         </div>
-        <button id="agregar">Agregar</button>
+        
+        
     </div>
     <script src="./dynamics/Js/index.js"></script>
 </body>
