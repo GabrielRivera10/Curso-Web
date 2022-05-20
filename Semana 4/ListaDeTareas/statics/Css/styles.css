@@ -31,7 +31,7 @@
     height: 1vw;
     color: rgb(3, 31, 31);
 }
-.hecha{
+.falta, .hecha{
     border: 2px;
     border-radius: 1vw;
     background-color: rgb(18, 3, 65);
@@ -54,7 +54,7 @@
     margin-bottom: 1vw;
     background-color: rgb(109, 255, 255);
 }
-.asignacion{
+.asignacion, .terminada{
     font-family: "Bonito";
     font-size: 2vw;
     width: 90%;
@@ -66,6 +66,9 @@
     display: block;
     margin-left:2vw;
     margin-bottom: 1vw;
+}
+.terminada{
+    background-color: green;
 }
 h1{
     font-family: "Bonito";
