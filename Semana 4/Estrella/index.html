@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./statics/styles/styles.css" rel="stylesheet">
+    <title>Estrellas</title>
+    
+</head>
+<body class="fondo" id="vista">
+    <h1>Dibujando Estrellas</h1>
+    <canvas id="canvas" width="500" height="600"></canvas>
+    <div id="cambios">
+        <label for="picos">Picos de la estrella: </label>
+        <input type="number" id="picos" name="picos" min="4" max="30" value="5">
+        <br/>
+        <label for="picudez">Picudez: </label>
+        <input type="range" id="picudez" name="picudez" min="20" max="60" value="20" step="10">
+        <br/>
+        <label for="color">Color: </label>
+        <input type="color" name="color" id="color" value="#000000">
+        <br/>
+        <label for="relleno">Relleno: </label>
+        <input type="checkbox" name="relleno" id="relleno">
+    </div>
+    <script src="./dynamics/Js/index.js"></script>
+</body>
+</html>
