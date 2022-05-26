@@ -1,0 +1,39 @@
+#cuerpo{
+    background-color: darkcyan;
+}
+#contenedor{
+    position: absolute;
+    width: 30vw;
+    height: 40vh;
+    left:40%;
+    top: 10%;
+    border-radius: 5vw;
+    background-color: floralwhite;
+}
+#tiempo{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: xx-large;
+    left:42%;
+    top: 5%;
+}
+#reloj{
+    position: relative;
+    font-size: xx-large;
+    left:43%;
+
+}
+.boton{
+    position: relative;
+    width: auto;
+    height: auto;
+    font-size: xx-large;
+    left: 27%;
+    top: 5%;
+    border: 5px;
+    border-style: groove;
+    border-color: azure;
+    border-radius: 2vw;
+
+}
